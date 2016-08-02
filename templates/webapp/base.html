@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <title>{% block title %}{% endblock %}</title>
+    {% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'webapp/style.css' %}"/>
+
+</head>
+<body>
+
+<h1>Travel Diaries <span class="glyphicon glyphicon-send"></span></h1>
+
+<hr>
+    {% block nav %}
+        {% if user.is_authenticated %}
+            <p align="right">
+            <a href="{% url 'toursdisplay' %}" >Tours</a>
+
+
+            <a href="{% url 'django.contrib.auth.views.logout' %}" class="logout" ><span class="glyphicon glyphicon-off"></span> Log out</a>
+            </p>
+        {% else %}
+            <p align="right">
+            <a href="{% url 'django.contrib.auth.views.login' %}" align="right">Login</a>
+            </p>
+        {% endif %}
+        <hr>
+    {% endblock %}
+
+
+    {% block content %}{% endblock %}
+
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+body
+{
+    background: white url("images/background4.jpg");
+
+}
+
+h1
+{
+
+    color:brown;
+    font-size:35px;
+
+
+
+}
+
+
+.aboutus
+{
+    float:left;
+    font-size: 20px;
+}
+
+
+
+#aboutushead
+{
+    color:green;
+}
+
+
+.loginform
+{
+    float: right;
+     border: 3px solid whitesmoke;
+    padding: 40px 80px 60px 50px;
+    margin-top: 20px;
+    margin-right:10px;
+
+}
+
+.colorred
+{
+    color: red;
+}
+
+
+.greenbutton
+{
+
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 2px;
+}
+.greenbutton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(1px);
+}
+
+
+.deletebutton{
+        background-color: red;
+    border: none;
+    color: white;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 2px;
+}
+
+
+a:link, a:visited {
+    background-color:royalblue;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+
+a:hover {
+    background-color: cornflowerblue;
+
+}
+
+a:active
+{
+         transform: translateY(1px);
+
+}
+
+a.deletebutton
+{
+     background-color: red;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+
+a.trashicon
+{
+    background-color: darkslategrey;
+    color: white;
+    padding: 7px 7px 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px;
+    font-size: 12px;
+}
+a.trashicon:hover
+{
+    background-color:darkgrey ;
+
+}
+
+a.notes
+{
+    background-color: transparent;
+    color:blue;
+    padding: 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+a.logout
+{
+    background-color: mediumblue;
+
+}
+
+a.deletebutton:hover
+{
+    background-color:indianred ;
+
+}
+
+
+a.logout:hover
+{
+    background-color:cornflowerblue ;
+
+}
+
+.details
+{
+    font-size: 20px;
+}
+
+.picname
+{
+    font-size: large;
+}
+
+.images
+{
+    margin-left: 70px;
+}

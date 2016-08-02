@@ -1,0 +1,29 @@
+
+{% extends "webapp/base.html" %}
+
+{% block title %}Tour List{% endblock %}
+
+
+{% block content %}
+
+    <h2>List of Your Tours</h2>
+    <p align="right">
+
+    <a href="{% url 'tourscreate' %}">create tour</a>
+
+    </p>
+
+    {% if not tour_list %}
+        <strong class="colorred">
+    *you don't have any tours click on create tour to create
+        </strong>
+    {% endif %}
+
+    <ol>
+        {%  for o in tour_list %}
+            <li><a href="{% url 'toursdetails' o.id %}">{{ o }}</a></li>
+                <br>
+        {%  endfor %}
+    </ol>
+
+{% endblock %}

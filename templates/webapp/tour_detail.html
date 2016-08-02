@@ -1,0 +1,44 @@
+
+{% extends "webapp/base.html" %}
+
+{% block title %}Tour Details{% endblock %}
+
+
+{% block content %}
+    <h2>Tour Memories</h2>
+    <p align="right">
+    <a href="{% url 'tourupdate' tour.id %}">update tour</a>
+    <a href="{% url 'tourdelete' tour.id %}" class="deletebutton">delete tour</a>
+    </p>
+    <table class="details">
+    <tr><th align="left" >Tour Date</th><th> : </th></th><th align ="left"> {{ tour.date }}</th></tr>
+    <tr><th align="left">Tour Location</th><th> : </th></th><th align ="left"> {{ tour.location }}</th></tr>
+    <tr><th align="left">Tour Details</th><th> : </th></th><th align ="left"> <a href="{{ tour.details.url }}" class="notes">notes <span class="glyphicon glyphicon-file"></span></a></th></tr>
+    </table>
+
+<br>
+    <h3>Images of Tour <span class="glyphicon glyphicon-picture"></span></h3>
+    <p align="right"><a href="{% url 'picurescreate' tour.id %}">
+    <span class="glyphicon glyphicon-plus-sign"></span> add picture</a></p>
+
+
+    {% if not tour.picture_set.all %}
+
+        <p class="colorred">you can add pictures related to this tour by clicking on add pictures</p>
+
+    {% endif %}
+
+
+    {% for image in tour.picture_set.all %}
+        <div class="images">
+        <div class="picname"><strong>{{ image.name }}</strong> <a href="{% url 'picturedelete' tour.id image.id %}" class="trashicon"><span class="glyphicon glyphicon-trash"></span></a></div>
+
+
+        <img src="{{ image.pic.url }}" height="300" width="400">
+        </div>
+        <br>
+        <br>
+    {% endfor %}
+
+
+{% endblock %}

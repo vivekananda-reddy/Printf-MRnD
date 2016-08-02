@@ -1,0 +1,28 @@
+{% extends "webapp/base.html" %}
+{% block title %}Login{% endblock %}
+
+
+{% block content %}
+    <div class="aboutus">
+    <p >
+       <h2 id="aboutushead"> Now store all your tour details at one place</h2>
+       <ul>
+        <li>store your tour details as per date</li>
+        <li>store pictures about the tour</li>
+           <li>store a file about your tour budget/important tour info</li>
+        </ul>
+
+      </p>
+    </div>
+    <div class="loginform">
+    <h2>Welcome To Travel Diaries</h2>
+        <h3 >Login</h3>
+        <form method="post" >{% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="login" class="greenbutton"/>
+        </form>
+    <br>
+    <br>
+    <a href="{% url 'register' %}">Register</a>
+    </div>
+{% endblock %}
