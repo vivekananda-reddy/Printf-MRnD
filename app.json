@@ -1,0 +1,19 @@
+{
+  "name": "Printf-MRnD",
+  "description": "tourdiaries",
+  "scripts": {
+  },
+  "env": {
+    "DISABLE_COLLECTSTATIC": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
